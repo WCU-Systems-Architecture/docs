@@ -48,9 +48,9 @@ markdown_extensions:
 
 # Define your initial navigation structure here
 nav:
-  - Home: index.md
+  - Home: docs/index.md
   - Data Governance:
-    - Overview: governance/index.md
+    - Overview: docs/governance/index.md
   - Infrastructure & Architecture:
-    - Overview: architecture/index.md
-    - Proposal 01 - Queue Metadata: architecture/queue-metadata.md
+    - Overview: docs/architecture/index.md
+    - Proposal 01 - Queue Metadata: docs/architecture/queue-metadata.md
