@@ -1,0 +1,56 @@
+site_name: WCU Sytems Architecture
+site_description: Long-term proposals and direction for data architecture.
+site_author: Mark Anderson
+
+theme:
+  name: material
+  palette:
+    # Light mode configuration
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode configuration
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs          # Top-level tabs for major proposal categories
+    - navigation.sections      # Sidebar sections for sub-proposals
+    - navigation.indexes       # Clicking a section folder opens its index page
+    - navigation.top           # "Back to top" button for long documents
+    - search.suggest           # Live search autocomplete
+    - search.highlight         # Highlights search terms on the page
+
+markdown_extensions:
+  - pymdownx.superfences:
+      # This enables native, beautiful Mermaid rendering
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - attr_list
+  - md_in_html
+
+# Define your initial navigation structure here
+nav:
+  - Home: index.md
+  - Data Governance:
+    - Overview: governance/index.md
+  - Infrastructure & Architecture:
+    - Overview: architecture/index.md
+    - Proposal 01 - Queue Metadata: architecture/queue-metadata.md
